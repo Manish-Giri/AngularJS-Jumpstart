@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>More on Directives</title>
+    <link href="19.css" rel="stylesheet">
+</head>
+<body ng-init="data = {name: 'James', isVisible: true, loggedIn: false, status: 'purple'}">
+<div ng-cloak>
+    <div ng-switch on="data.loggedIn">
+        <div ng-switch-when="true">Welcome {{ data.name}} </div>
+        <div ng-switch-default ng-class="data.status">Login</div>
+    </div>
+    <br>
+    <div ng-show="data.isVisible">
+        <p>Name: <input type="text" ng-model="data.name"></p>
+        <h2 ng-bind="data.name"></h2>
+    </div>
+</div>
+<script src="../angular.js"></script>
+</body>
+</html>
