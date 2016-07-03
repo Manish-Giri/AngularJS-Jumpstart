@@ -5,9 +5,11 @@
     <title>Iterating over data</title>
 </head>
 <body>
-<div ng-init="names=['Dan', 'Bob', 'Chad', 'Jenn', 'Ali']">
+<div ng-init="people=[{name: 'Dan', city: 'New York'}, {name: 'Tom', city: 'New Jersey'},
+    {name: 'Rob', city: 'Portland'}, {name: 'Bob', city: 'Pittsburgh'}]">
+    <h2>Iterating through Data</h2>
     <ol>
-        <li ng-repeat="name in names">{{name}}</li>
+        <li ng-repeat="person in people">{{person.name}} -> {{ person.city}}</li>
     </ol>
 </div>
 <script src="../angular.js"></script>
